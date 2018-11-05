@@ -1,7 +1,7 @@
 {
-  "name": "tsoa",
+  "name": "@keytelematics/tsoa",
   "description": "Build swagger-compliant REST APIs using TypeScript and Node",
-  "version": "2.2.5",
+  "version": "2.2.5-alpha.1",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "keywords": [
@@ -25,7 +25,7 @@
     "lint": "tslint --exclude ./node_modules/** ./src/**/*.ts ./tests/**/*.ts",
     "format": "tsfmt -r",
     "prepare": "npm run build",
-    "deploy": "npm version patch -m \"Release v%s\" && npm publish",
+    "deploy": "npm version patch -m \"Release v%s\" && npm publish --access public",
     "preversion": "npm test",
     "postversion": "git push origin master && git push --follow-tags",
     "routes-gen": "node ./dist/cli.js routes",
